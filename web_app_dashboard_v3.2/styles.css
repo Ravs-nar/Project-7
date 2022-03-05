@@ -1,4 +1,95 @@
 *{
+box-sizing: border-box;
 margin: 0px;
 padding: 0px;
-};
+text-align: center;
+font-size: 12px;
+}
+
+.bell{
+    max-width: 10%;
+}
+
+.social {
+    max-width: 10%;
+}
+.nav{
+    max-width: 10%;
+}
+.pp{
+    max-width: 15%;
+}
+
+.grid-container{
+display: grid;
+grid-template-columns: 100%;
+grid-template-rows: auto;
+grid-template-areas: "header" "navigation" "main";
+}
+
+.header{
+    grid-area:header;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+
+.nav {
+    grid-area: navigation;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-content: center;
+}
+.widget-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.main {
+    grid-area: main;
+    align-content: center;
+    display: grid;
+}
+
+
+
+
+
+@media (min-width: 768px){
+    .grid-container {
+        grid-template-columns: 50% 1fr;
+        grid-template-areas:
+        "header header"
+        "navigation main";
+         
+    }
+  .header{
+      grid-area: header;
+  }
+  .nav {
+      grid-area: navigation;
+      display: flex;
+      flex-direction: column;
+  }
+  
+}
+
+@media (min-width: 768px) {
+    .main{
+        grid-template-columns: 50%;
+    }
+    .traffic, .social{
+        grid-column: 1 / span 2;
+    }
+    .daily, .members, .message {
+        grid-column: 2 / span 1;
+    }
+
+    .mobile, .activity, .settings {
+        grid-column: 2 / span 1;
+    }
+}
