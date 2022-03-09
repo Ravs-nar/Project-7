@@ -55,6 +55,9 @@ grid-template-areas: "header" "navigation" "main";
     display: grid;
 }
 
+.widget-container-full, .widget-container-half {
+    width: 95vw;
+}
 
 
 
@@ -75,6 +78,7 @@ grid-template-areas: "header" "navigation" "main";
       display: flex;
       flex-direction: column;
   }
+  
   
 }
 
