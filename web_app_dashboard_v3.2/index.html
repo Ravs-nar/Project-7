@@ -5,6 +5,10 @@
         <title>Ravi's Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <script src= "https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js/"></script>
+        <script src="charts.js"></script>
+        <script src="bar.js"></script>
+       
 </head>
     <header class="main-header">
         <h1>Webb Dashboard</h1>
@@ -43,8 +47,8 @@
                         </div>
                         <HR>
                         <div class="widget-container-full">
-                            <script src="charts.js"></script>
-                            <canvas id="traffic-chart"></canvas>
+                
+                            <canvas id="traffic-chart" width="400" height="400"></canvas>
                         </div>
                   </section>
                         <!--bar graph-->
@@ -177,7 +181,7 @@
                             <h3 style="font-size: 21px; font-weight:bold; margin-bottom: 15px; text-align:left;">Settings</h3>
                                 <input type="checkbox" id="check" class="toggle">
                                 <label for="check">Send Email Notfications</label>
-                                
+
                                 <input type="checkbox" id="check1" class="toggle">
                                 <label for="check1">Set Profile to Public</label>
                     </section>
@@ -192,5 +196,7 @@
                                 <button class="button-disabled" id="cancel">Cancel</button>
                                </div>
                         </section>
+                    
  </main> 
+ 
 </html>
