@@ -4,7 +4,6 @@ margin: 0px;
 padding: 0px;
 text-align: center;
 align-items: center;
-font-family: "Lucida Console", "Courier New", monospace;
 font-style: normal ;
 
 
@@ -18,9 +17,9 @@ font-style: normal ;
 .sm {
     background-color: rgb(127, 122, 192);
     fill:white;
-    border: solid 10px rgb(127, 122, 192);
+    border: solid 20px rgb(127, 122, 192);
     border-radius: 90px;
-    padding: 2px;
+    padding: 8px;
    
     
 }
@@ -60,7 +59,7 @@ font-style: normal ;
 
 /*Font sizes--------------------------------------------------------------------------*/
 .stext {
-    font-size: 23px;
+    font-size: 60px;
 }
 /**Grid Layout--------------------------------------------------------------------**/
 .grid-container {
@@ -89,7 +88,6 @@ nav {
 }
 
 .headline {
-    font-size: 20px;
     font-weight: bold;
     text-align: left;
     margin-bottom: 10px;
@@ -185,6 +183,11 @@ nav{
 
 .low {
     margin-bottom: 7px;
+    font-weight:bold;
+}
+
+.comment {
+    font-weight: bold;
 }
 
 
@@ -286,6 +289,12 @@ background-color: rgb(191, 192, 182);
 
 @media (min-width: 768px){
 
+
+body {
+    position: relative;
+}
+
+
     .grid-container {
     margin-left: 90px;
     display: grid;
@@ -313,17 +322,21 @@ background-color: rgb(191, 192, 182);
 nav {
     display: flex;
     flex-direction: column;
+    position:absolute;
     justify-content: flex-start;
     height: 100%;
     width: 75px;
-    position: absolute;
     z-index: 1;
-    top: 90px;
     left: 0;
     background-color: rgb(91, 90, 134);
     overflow-x: hidden;
     padding: 0;
 
+  }
+
+
+  .stext {
+     font-size: 20px; 
   }
   
 .charts {
@@ -459,5 +472,9 @@ width: 98%;
 .settings {
     grid-area: settings2;
 }
+
+.stext {
+    font-size: 80px; 
+ }
 
 }
