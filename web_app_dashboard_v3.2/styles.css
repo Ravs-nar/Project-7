@@ -3,26 +3,55 @@ box-sizing: border-box;
 margin: 0px;
 padding: 0px;
 text-align: center;
-font-size: 12px;
+align-items: center;
+font-family: "Lucida Console", "Courier New", monospace;
+font-style: normal ;
+
+
 }
 
-
+/*Image sizes----------------------------------------------------------------*/
 .bell{
     max-width: 14%;
+    fill: white;
+}
+.sm {
+    background-color: rgb(127, 122, 192);
+    fill:white;
+    border: solid 10px rgb(127, 122, 192);
+    border-radius: 90px;
+    padding: 2px;
+   
+    
 }
 
-.social {
-    max-width: 40%;
+.icon {
+    fill: white;
 }
+
 .emblem {
     max-width: 15%;
-    color: whitesmoke;
+    fill: white;
 }
 .pp{
     max-width: 25%;
+    border-radius: 50%;
+    margin-top: 10px;
 }
 
-/**Grid Layout**/
+
+/*SVG-----------------------------*/
+.face {
+    color: aliceblue;
+}
+
+
+
+/*Font sizes--------------------------------------------------------------------------*/
+.stext {
+    font-size: 23px;
+}
+/**Grid Layout--------------------------------------------------------------------**/
 .grid-container {
     display: grid;
     grid-template-columns: 100%;
@@ -48,7 +77,14 @@ nav {
     
 }
 
-/**header**/
+.headline {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/**header---------------------------------------------------------------------**/
 .top-header {
     display: flex;
     flex-direction: row;
@@ -61,8 +97,21 @@ nav {
     justify-content: end;
     color: whitesmoke;
 }
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tab {
+height: 50px;
+width: 65%;
+background-color: rgba(105, 87, 87, 0.24);
+margin-bottom: 10px;
+}
 
-/**nav*/
+/**nav-------------------------------------------------------------------------------*/
+
+
 nav{
     display: flex;
     flex-direction: row;
@@ -74,7 +123,7 @@ nav{
     color: whitesmoke;
     
 }
-/*alert tab*/
+/*alert tab-------------------------------------------------------------------------------------------*/
 .alert-banner {
     display: flex;
     flex-direction: row;
@@ -92,7 +141,7 @@ nav{
 .traffic-nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     list-style-type: none;
     padding-right:8px;
     padding-left: 8px;
@@ -100,24 +149,64 @@ nav{
 
 .traffic-nav-link {
     font-size: 15px;
+    margin-left: 5px;
+    margin-right: 10px;
 }
-/*charts*/
+/*charts*----------------------------------------------------------------------------------------------*/
 #traffic-chart {
     height: 400px;
 }
 
-/* social*/
-.social {
+/*social------------------------------------------------------------------------------------------------*/
+
+.social-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(194, 202, 185);
+    padding: 38px;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 10px;
+}
+
+
+.low {
+    margin-bottom: 7px;
+}
+
+
+.widget-container {
     display: flex;
     flex-direction: column;
 }
 
+/*Form---------------------------------------------------------------*/
+.form-field {
+    padding: 15px 60px 15px 0px ;
+    border-radius: 5px;
+    text-align: start;
+    width: 220px;
+    color: rgb(167, 163, 163);  
+}
+.form-area {
+    padding: 3px 72px 55px 0px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.button-primary {
+    padding: 15px 36px 15px 36px;
+    width : 225px;
+    border-radius: 5px; 
+    background-color: rgb(127, 122, 192);
+    color: whitesmoke;
+    font-weight: bold;
+}
 
 
-
-
-
-/***Toggle styles*/
+/***Toggle styles-----------------------------------------------------------------*/
 input[type="checkbox"].toggle {
     opacity: 0;
     left: -9000px;
@@ -125,8 +214,10 @@ input[type="checkbox"].toggle {
 }
 
 input[type="checkbox"].toggle + label {
-    position: relative;
+   position: relative;
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
 }
@@ -139,7 +230,7 @@ input[type="checkbox"].toggle + label::before {
     width: 4em;
     height: 2em;
     font-size: 1em;
-    background-color: rgb(157, 91, 219);
+    background-color: rgb(127, 122, 192);
     border-radius: 1em;
     color: white;
     margin-right: .25em;
@@ -148,8 +239,8 @@ input[type="checkbox"].toggle + label::before {
 }
 
 input[type="checkbox"].toggle + label::after {
-    position: absolute;
-    left: .1em;
+   position: absolute;
+    right: 2.3em;
     content: "";
     width: 1.9em;
     height: 1.9em;
@@ -162,42 +253,196 @@ input[type="checkbox"].toggle:checked + label::after {
     background-color: rgb(221, 221, 221);
 }
 
-
-
-
-
-@media (min-width: 768px){
-    .grid-container {
-        grid-template-columns: 50% 1fr;
-        grid-template-areas:
-        "header header"
-        "navigation main";
-         
-    }
-  .header{
-      grid-area: header;
-  }
-  .nav {
-      grid-area: navigation;
-      display: flex;
-      flex-direction: column;
-  }
-  
-  
+.button-primary1 {
+width: 98px; 
+height: 40px; 
+margin-right: 10px;
+background-color: rgb(127, 122, 192);
+color: whitesmoke;
+border-radius: 5px;
 }
 
-@media (min-width: 768px) {
-    .main{
-        grid-template-columns: 50%;
-    }
-    .traffic, .social{
-        grid-column: 1 / span 2;
-    }
-    .daily, .members, .message {
-        grid-column: 2 / span 1;
-    }
+.button-disabled {
+width: 98px; 
+height: 40px;
+color: whitesmoke;
+border-radius: 5px;
+background-color: rgb(191, 192, 182);
+}
 
-    .mobile, .activity, .settings {
-        grid-column: 2 / span 1;
-    }
+
+/*--------------------------------------------------------------------------------------*/
+
+@media (min-width: 768px){
+
+    .grid-container {
+    margin-left: 90px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: minmax(200px, auto);
+    grid-row-gap: 20px;
+    grid-template-areas: 
+    "header header"
+    "navigation main"
+     "social social"
+     "account account"
+     "ra ra"
+     "sign sign"
+     "set set"
+}
+
+
+.emblem {
+    
+    max-width: 90%;
+    margin-bottom: 20px;
+    
+}
+
+nav {
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 75px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(91, 90, 134);
+    overflow-x: hidden;
+    padding: 0;
+
+  }
+  
+.charts {
+    grid-column-start:1 ;
+    grid-column-end:-1 ;
+}
+
+.daily-traffic {
+    grid-area: navigation;
+}
+
+.mobile-donut {
+    grid-area: main;
+}
+
+.shead {
+    grid-area: social;
+    margin-bottom: 150px;
+}
+/*Social Icons--------------------------------------------------------------------*/
+
+.look {
+    width: 25%;
+    grid-area: social;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+
+/*Social Activity-----------------------------------*/
+
+.members {
+grid-area: account;
+
+}
+
+.member-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: solid rgb(214, 205, 205);
+}
+
+.low {
+flex-basis: 100%;
+}
+
+.members-text {
+    margin-left: 20px;
+}
+/*Recent social activity---------------------------------------*/
+
+.recent-activity {
+grid-area: ra;
+
+}
+
+/*Form-----------------------------------------------------------------------------------*/
+
+
+.form-field {
+width: 98%;
+}
+.form-area{
+    width: 98%;
+}
+.button-primary{
+    width: 98%;
+}
+/*footer----------------------------------------------------------------------------------*/
+.message {
+    grid-area: sign;
+}
+
+.settings {
+    grid-area: set;
+    
+}
+
+.settings-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.button-primary1 {
+    width: 50%;
+}
+.button-disabled {
+    width: 48%;
+}
+}
+
+
+/*Min Width of 1024px -----------------------------------------------------------------------------*/ 
+@media (min-width: 1024px) {
+    .grid-container {
+        margin-left: 90px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-auto-rows: minmax(200px, auto);
+        grid-row-gap: 20px;
+        grid-template-areas: 
+        "header header"
+        "navigation main"
+        "social social"
+        "social1 social2"
+        "settings1 settings2"
+}
+
+
+.look {
+    width: 25%;
+    grid-area: social;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-start;
+}
+.members {
+    grid-area:social1;
+}
+.recent-activity {
+    grid-area: social2;
+}
+.message {
+    grid-area: settings1;
+}
+.settings {
+    grid-area: settings2;
+}
+
 }
