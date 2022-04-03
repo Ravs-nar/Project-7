@@ -39,13 +39,24 @@ font-style: normal ;
     margin-top: 10px;
 }
 
+.member-container {
+    border: solid rgb(214, 205, 205);
+}
+
 
 /*SVG-----------------------------*/
 .face {
     color: aliceblue;
 }
 
+/*JavaScript---------------------------------------*/
+.daily-traffic {
+    border: solid 1px grey;
+}
 
+.mobile-donut {
+    border:solid 1px grey;
+}
 
 /*Font sizes--------------------------------------------------------------------------*/
 .stext {
@@ -300,15 +311,14 @@ background-color: rgb(191, 192, 182);
 }
 
 nav {
-    margin-top: 85px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
     width: 75px;
-    position: fixed;
+    position: absolute;
     z-index: 1;
-    top: 0;
+    top: 90px;
     left: 0;
     background-color: rgb(91, 90, 134);
     overflow-x: hidden;
@@ -350,6 +360,9 @@ nav {
 grid-area: account;
 
 }
+#move{
+    margin-bottom: 110px;
+}
 
 .member-container {
     display: flex;
@@ -360,6 +373,8 @@ grid-area: account;
 
 .low {
 flex-basis: 100%;
+font-size: large;
+font-weight: bold;
 }
 
 .members-text {
