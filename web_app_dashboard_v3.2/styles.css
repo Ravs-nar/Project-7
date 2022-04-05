@@ -5,23 +5,30 @@ padding: 0px;
 text-align: center;
 align-items: center;
 font-style: normal ;
+font-family:Arial, Helvetica, sans-serif;
 
 
 }
 
 /*Image sizes----------------------------------------------------------------*/
 .bell{
-    max-width: 14%;
+    max-width: 15%;
     fill: white;
 }
 .sm {
     background-color: rgb(127, 122, 192);
     fill:white;
-    border: solid 20px rgb(127, 122, 192);
     border-radius: 90px;
     padding: 8px;
-   
-    
+}
+
+.dot {
+    height: 4px;
+    width: 4px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
 }
 
 .icon {
@@ -33,13 +40,14 @@ font-style: normal ;
     fill: white;
 }
 .pp{
-    max-width: 25%;
+    max-width: 17%;
     border-radius: 50%;
     margin-top: 10px;
 }
 
 .member-container {
-    border: solid rgb(214, 205, 205);
+    border-top: solid rgb(214, 205, 205);
+
 }
 
 
@@ -50,16 +58,28 @@ font-style: normal ;
 
 /*JavaScript---------------------------------------*/
 .daily-traffic {
-    border: solid 1px grey;
+    border-bottom: solid 1px rgb(168, 168, 168);
+    border-top: solid 1px rgb(168, 168, 168);
 }
 
 .mobile-donut {
-    border:solid 1px grey;
+
+    padding-bottom: 10px;
+    border-bottom:solid 1px rgb(168, 168, 168);
 }
 
 /*Font sizes--------------------------------------------------------------------------*/
+.webhead {
+margin-left: 15px; 
+width: 92px; 
+font-family:Arial, Helvetica, sans-serif;
+font-weight: 100;
+font-size: 19px;
+}
+
 .stext {
-    font-size: 60px;
+    font-size: 39px;
+    color:rgb(105, 103, 103);
 }
 /**Grid Layout--------------------------------------------------------------------**/
 .grid-container {
@@ -88,7 +108,8 @@ nav {
 }
 
 .headline {
-    font-weight: bold;
+    margin-top: 7px;
+    font-style: normal; 
     text-align: left;
     margin-bottom: 10px;
 }
@@ -113,9 +134,10 @@ nav {
 }
 .tab {
 height: 50px;
-width: 65%;
+width: 55%;
 background-color: rgba(105, 87, 87, 0.24);
 margin-bottom: 10px;
+border: solid 1px grey;
 }
 
 /**nav-------------------------------------------------------------------------------*/
@@ -172,12 +194,13 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: rgb(194, 202, 185);
-    padding: 38px;
+    background-color: rgb(216, 223, 208);
+    padding: 15px;
     border-radius: 5px;
     margin-left: 8px;
     margin-right: 8px;
     margin-bottom: 10px;
+    border: solid 1px rgb(167, 163, 163);
 }
 
 
@@ -186,9 +209,6 @@ nav{
     font-weight:bold;
 }
 
-.comment {
-    font-weight: bold;
-}
 
 
 .widget-container {
@@ -202,7 +222,7 @@ nav{
     border-radius: 5px;
     text-align: start;
     width: 220px;
-    color: rgb(167, 163, 163);  
+    color: rgb(150, 143, 143);  
 }
 .form-area {
     padding: 3px 72px 55px 0px;
@@ -296,11 +316,9 @@ body {
 
 
     .grid-container {
-    margin-left: 90px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-auto-rows: minmax(200px, auto);
-    grid-row-gap: 20px;
     grid-template-areas: 
     "header header"
     "navigation main"
@@ -314,7 +332,8 @@ body {
 
 .emblem {
     
-    max-width: 90%;
+    max-width: 64%;
+    margin-top: 20px;
     margin-bottom: 20px;
     
 }
@@ -325,7 +344,7 @@ nav {
     position:absolute;
     justify-content: flex-start;
     height: 100%;
-    width: 75px;
+    width: 44px;
     z-index: 1;
     left: 0;
     background-color: rgb(91, 90, 134);
