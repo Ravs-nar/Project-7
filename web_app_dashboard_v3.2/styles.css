@@ -10,16 +10,27 @@ font-family:Arial, Helvetica, sans-serif;
 
 }
 
+
 /*Image sizes----------------------------------------------------------------*/
 .bell{
     max-width: 15%;
     fill: white;
+    transition: transform .5s ease-in;
 }
+
+.bell:hover {
+    transform-origin: center;
+    transform: rotate(360deg);
+}
+
+
+
+
 .sm {
     background-color: rgb(127, 122, 192);
     fill:white;
-    border-radius: 90px;
-    padding: 8px;
+    border-radius: 50px;
+    padding: 17px;
 }
 
 .dot {
@@ -36,7 +47,7 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 .emblem {
-    max-width: 15%;
+    max-width: 45%;
     fill: white;
 }
 .pp{
@@ -47,6 +58,8 @@ font-family:Arial, Helvetica, sans-serif;
 
 .member-container {
     border-top: solid rgb(214, 205, 205);
+    padding-bottom: 5px;
+    border-bottom: solid rgb(214, 205, 205);
 
 }
 
@@ -57,15 +70,18 @@ font-family:Arial, Helvetica, sans-serif;
 }
 
 /*JavaScript---------------------------------------*/
+#traffic-chart {
+    border-bottom: 1px solid rgb(105, 103, 103);
+}
+
 .daily-traffic {
-    border-bottom: solid 1px rgb(168, 168, 168);
-    border-top: solid 1px rgb(168, 168, 168);
+   
+    border-bottom: 1px solid rgb(105, 103, 103);
 }
 
 .mobile-donut {
-
-    padding-bottom: 10px;
-    border-bottom:solid 1px rgb(168, 168, 168);
+    border-bottom: 1px solid rgb(105, 103, 103);
+    
 }
 
 /*Font sizes--------------------------------------------------------------------------*/
@@ -108,10 +124,11 @@ nav {
 }
 
 .headline {
-    margin-top: 7px;
+    margin-top: 5px;
     font-style: normal; 
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 /**header---------------------------------------------------------------------**/
@@ -190,17 +207,26 @@ nav{
 
 /*social------------------------------------------------------------------------------------------------*/
 
+
+
 .social-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: rgb(216, 223, 208);
-    padding: 15px;
+    padding: 9%;
+    padding-right: 18%;
     border-radius: 5px;
-    margin-left: 8px;
+    margin-left: 15px;
     margin-right: 8px;
     margin-bottom: 10px;
     border: solid 1px rgb(167, 163, 163);
+}
+
+.social-platform {
+color:rgb(127, 122, 192); 
+font-size:16px;
+text-align: left;
 }
 
 
@@ -221,7 +247,7 @@ nav{
     padding: 15px 60px 15px 0px ;
     border-radius: 5px;
     text-align: start;
-    width: 220px;
+    width: 250px;
     color: rgb(150, 143, 143);  
 }
 .form-area {
@@ -229,10 +255,11 @@ nav{
     margin-bottom: 15px;
     margin-top: 15px;
     border-radius: 5px;
+    width: 250px;
 }
 .button-primary {
     padding: 15px 36px 15px 36px;
-    width : 225px;
+    width : 250px;
     border-radius: 5px; 
     background-color: rgb(127, 122, 192);
     color: whitesmoke;
@@ -261,20 +288,20 @@ input[type="checkbox"].toggle + label::before {
    justify-content: start;
    align-items: center;
     content: "ON";
-    width: 4em;
+    width: 5em;
     height: 2em;
     font-size: 1em;
     background-color: rgb(127, 122, 192);
     border-radius: 1em;
     color: white;
-    margin-right: .25em;
+    margin-left: 2em;
     transition: 200ms ease-in-out;
 
 }
 
 input[type="checkbox"].toggle + label::after {
    position: absolute;
-    right: 2.3em;
+    right: 3.1em;
     content: "";
     width: 1.9em;
     height: 1.9em;
@@ -283,12 +310,12 @@ input[type="checkbox"].toggle + label::after {
     transition: 200ms ease-in-out;
 }
 input[type="checkbox"].toggle:checked + label::after {
-    transform: translateX(100%);
+    transform: translateX(159%);
     background-color: rgb(221, 221, 221);
 }
 
 .button-primary1 {
-width: 98px; 
+width: 40%; 
 height: 40px; 
 margin-right: 10px;
 background-color: rgb(127, 122, 192);
@@ -297,12 +324,22 @@ border-radius: 5px;
 }
 
 .button-disabled {
-width: 98px; 
+width: 40%; 
 height: 40px;
 color: whitesmoke;
 border-radius: 5px;
 background-color: rgb(191, 192, 182);
 }
+
+
+.toggle-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+
 
 
 /*--------------------------------------------------------------------------------------*/
@@ -312,10 +349,12 @@ background-color: rgb(191, 192, 182);
 
 body {
     position: relative;
+    
 }
 
 
     .grid-container {
+    margin-left: 60px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-auto-rows: minmax(200px, auto);
@@ -343,8 +382,8 @@ nav {
     flex-direction: column;
     position:absolute;
     justify-content: flex-start;
-    height: 100%;
-    width: 44px;
+    height: 97%;
+    width: 55px;
     z-index: 1;
     left: 0;
     background-color: rgb(91, 90, 134);
@@ -354,9 +393,6 @@ nav {
   }
 
 
-  .stext {
-     font-size: 20px; 
-  }
   
 .charts {
     grid-column-start:1 ;
@@ -369,6 +405,8 @@ nav {
 
 .mobile-donut {
     grid-area: main;
+    border-left:1px solid rgb(105, 103, 103);
+
 }
 
 .shead {
@@ -390,28 +428,48 @@ nav {
 
 .members {
 grid-area: account;
+border-right: solid 2px rgb(214, 205, 205); 
 
 }
-#move{
-    margin-bottom: 110px;
+.header-box{
+    border-top: solid 2px rgb(214, 205, 205);
+    
 }
+.member-container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
 
 .member-container {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    border: solid rgb(214, 205, 205);
+    
 }
 
 .low {
 flex-basis: 100%;
 font-size: large;
 font-weight: bold;
+text-align: end;
 }
 
 .members-text {
     margin-left: 20px;
+    
 }
+
+.name {
+    text-align: left;
+}
+
+.day {
+    text-align: left;
+}
+
+
 /*Recent social activity---------------------------------------*/
 
 .recent-activity {
@@ -458,7 +516,7 @@ width: 98%;
 /*Min Width of 1024px -----------------------------------------------------------------------------*/ 
 @media (min-width: 1024px) {
     .grid-container {
-        margin-left: 90px;
+        margin-left: 60px;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-auto-rows: minmax(200px, auto);
@@ -473,7 +531,7 @@ width: 98%;
 
 
 .look {
-    width: 25%;
+    width: 60%;
     grid-area: social;
     display: flex;
     flex-direction: row; 
@@ -493,7 +551,10 @@ width: 98%;
 }
 
 .stext {
-    font-size: 80px; 
+    font-size: 60px; 
  }
 
+
+
 }
+
