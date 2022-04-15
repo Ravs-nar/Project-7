@@ -242,6 +242,11 @@ text-align: left;
     flex-direction: column;
 }
 
+.mark {
+    color: transparent;
+}
+
+
 /*Form---------------------------------------------------------------*/
 .form-field {
     padding: 15px 60px 15px 0px ;
@@ -448,6 +453,18 @@ border-right: solid 2px rgb(214, 205, 205);
     justify-content: flex-start;
     
 }
+.mark {
+    color: black;
+    text-align: end;
+    flex-basis: 100%;
+}
+
+.comment {
+    text-align: left;
+}
+
+
+
 
 .low {
 flex-basis: 100%;
